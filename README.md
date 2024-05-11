@@ -11,6 +11,7 @@ In this project the goal had been to take a piece of data that was not in an alr
 
 ## Description
 
+I began this project with the goal of locating a data that was not readily available for analysis; thus, I had come across Noita. To my suprise, I had possessed around 30-hours of gameplay in Noita, a dunegeon crawler type game. waht is that you might ask, in this case to put it simply, it is a game that has no end-goal, you simply progress deeper into the dungeons that you are presented with battling monsters along the way until you eventually die; thus, in most cases these game sessions can be quite quick, or quite long. In my case with an avergae game time of around 7-minutes, my games felt long, but were not. 
 Longer description explaining the rationale/intent behind the project, what it's good for, and how it works. If the next two subsections are short enough, they can be merged up into this block—perhaps as bulleted lists.
 
 ### Features
