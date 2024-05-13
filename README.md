@@ -1,33 +1,33 @@
 # Data Compilation In Noita
 
-In this project the goal had been to take a piece of data that was not in an already usable format, and process it into something that is usable. Thus, I have taken data from a game called Noita, and turned the data into a useable format (i.e., CSV) that I could import into PostgreSQL and begin data analyzation upon.
-
-<div align="center">
-  <kbd>
-    <img src="https://imgur.com/M4qqaVu.png" width="75%" height="75%" /> 
-    <img src="https://imgur.com/Nusdi1h.png" width="75%" height="75%" /> 
-  </kbd>
-</div>
+The overarching goal of this project is to extract and format data from the game Noita for analysis. I embarked on converting Extensible Markup Language (XML) data files into a PostgreSQL-compatible format. Leveraging Python libraries like ElementTree, CSV, and Glob, I streamlined the process by locating files, parsing XML data, and writing it into CSV format. This method facilitated efficient extraction and conversion, ensuring readiness for analysis.
 
 ## Description
 
-I began this project with the goal of locating a data that was not readily available for analysis; thus, I had come across Noita. To my suprise, I had possessed around 30-hours of gameplay in Noita, a dunegeon crawler type game. waht is that you might ask, in this case to put it simply, it is a game that has no end-goal, you simply progress deeper into the dungeons that you are presented with battling monsters along the way until you eventually die; thus, in most cases these game sessions can be quite quick, or quite long. In my case with an avergae game time of around 7-minutes, my games felt long, but were not. I had then began to search the game files for data that I could scrape together when I had come across several "xml" files of data from each of my play sessions; however, I was in a bind. I did not understand "xml" nor how to pull the data I wanted from it; thus, I began my search for a python library, and stumbled upon ElementTree, a Python library curated for reading data from "xml" files. I then learned it enough just for it to be usebale for what I needed, and then read the data from each "xml" file in a folder that possessed the ending similar to "-stats.xml". In this process of parsing through the each folder, I had the data written to a "csv" file using the Python library "CSV". To put it simply, utilizing the library ElementTree, and Glob; I open the folder of data files, open up each file one at a time, then read and write that data to a CSV file utilizing the library CSV.
+In this project, the overarching goal was to pull and process data into a readable, analyzable format. I had my goal in hand, and to my surprise, I stumbled across a game that I had frequented, Noita. I possessed 30 hours of game time, with an average game session of around 7 minutes. To provide some background, the game Noita is a dungeon-crawler game "in which [players] navigate a labyrinth environment (i.e., a "dungeon"), battling various monsters, avoiding traps, solving puzzles, and looting any treasure they may find".
 
-Longer description explaining the rationale/intent behind the project, what it's good for, and how it works. If the next two subsections are short enough, they can be merged up into this block—perhaps as bulleted lists.
+<div align="center">
+  <kbd>
+    <img src="https://imgur.com/aMArCBP.png" /> 
+  </kbd>
+</div>
 
-### Features
+I dived into the game's folders and files to begin the project! I stumbled across the data files; however, said files were in an extensible markup language format. I needed to read and write the data from said files in a format suitable for import into PostgreSQL. 
 
-- It's TINY. A short README is a good README.
-- List other standout qualities that'll make a potential user want to try out your project.
+I employed several libraries in Python to do this; I used the following libraries...
 
-### Built with
+- ElementTree; for parsing XML files.
+- CSV;  for writing data into CSV format.
+- Glob; for locating relevant files.
 
-- Markdown
-- Love
+In essence, the process is straightforward. The Glob library is responsible for locating the files, which are then passed to the ElementTree library for reading. The data is temporarily stored, and then the CSV library takes over, writing the data into a CSV file. This simple yet effective process ensures a smooth and efficient data extraction and conversion!
 
-## Getting started
+<div align="center">
+  <kbd>
+    <img src="https://imgur.com/7i1CFUI.png" width="66%" height="66%" /> 
+    <img src="https://imgur.com/oVmXKlW.png" width="66%" height="66%" /> 
+  </kbd>
+</div>
 
-### Prerequisites
 
-Dependencies not explicitly covered in the installation process; e.g., OS restrictions.
 
