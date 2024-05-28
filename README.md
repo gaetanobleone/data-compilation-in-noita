@@ -25,7 +25,7 @@ In essence, the process is straightforward. The Glob library is responsible for
 <div align="center">
   <kbd>
     <img src="https://imgur.com/h2YaRhV.png" width="66%" height="66%" /> 
-    <img src="https://imgur.com/5IDIt0Q.png" width="66%" height="66%" /> 
+    <img src="https://imgur.com/3QkUtfZ.png" width="66%" height="66%" /> 
     <img src="https://imgur.com/oVmXKlW.png" width="66%" height="66%" /> 
   </kbd>
 </div>
