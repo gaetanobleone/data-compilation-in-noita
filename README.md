@@ -15,7 +15,9 @@ In this project, the overarching goal was to pull and process data into a readab
 <br>
 
 ```
-SELECT avg(playtime) AS average_playtime_v1, avg(playtime_str) AS average_playtime_v2
+SELECT
+  avg(playtime) AS average_playtime_v1,
+  avg(playtime_str) AS average_playtime_v2
 FROM player_stats;
 ```
 
