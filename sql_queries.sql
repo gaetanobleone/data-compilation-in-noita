@@ -112,6 +112,6 @@ ORDER BY minutes_played_rounded;
 SELECT count(killed_by) AS total, killed_by
 FROM player_stats
 GROUP BY killed_by
-ORDER BY count(killed_by) DESC
+ORDER BY total DESC
 LIMIT 10;
 
