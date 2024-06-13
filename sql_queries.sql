@@ -98,11 +98,14 @@ LIMIT 15;
 --this is to essentially pull the length of each individual game sessions in minutes
 --cutting out any decimals in an effort to keep the overall sturcture simple and understandable, then
 --it is categroized by what ended the session
-SELECT CAST(playtime / 60 AS integer) AS minutes_played_rounded, count(CAST(playtime / 60 AS integer )) AS total_sessions, killed_by
+SELECT
+  CAST(playtime / 60 AS integer) AS minutes_played_rounded,
+  count(CAST(playtime / 60 AS integer )) AS total_sessions,
+  killed_by
 FROM player_stats
 WHERE player_ended_session = FALSE
-GROUP BY killed_by, CAST(playtime / 60 AS integer)
-ORDER BY CAST(playtime / 60 AS integer);
+GROUP BY killed_by, minutes_played_rounded
+ORDER BY minutes_played_rounded;
 
 
 -- displays what had killed the player
