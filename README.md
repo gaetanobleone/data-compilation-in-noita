@@ -12,6 +12,13 @@ In this project, the overarching goal was to pull and process data into a readab
   </kbd>
 </div>
 
+<br>
+
+```
+SELECT avg(playtime) AS average_playtime_v1, avg(playtime_str) AS average_playtime_v2
+FROM player_stats;
+```
+
 I dived into the game's folders and files to begin the project! I stumbled across the data files; however, said files were in an extensible markup language format. I needed to read and write the data from said files in a format suitable for import into PostgreSQL. 
 
 I employed several libraries in Python to do this; I used the following libraries...
@@ -25,10 +32,43 @@ In essence, the process is straightforward. The Glob library is responsible for
 <div align="center">
   <kbd>
     <img src="https://imgur.com/h2YaRhV.png" width="66%" height="66%" /> 
-    <img src="https://imgur.com/3QkUtfZ.png" width="66%" height="66%" /> 
-    <img src="https://imgur.com/oVmXKlW.png" width="66%" height="66%" /> 
   </kbd>
 </div>
+
+
+<br>
+
+```
+SELECT
+  count(killed_by) AS total,
+  killed_by
+FROM player_stats
+GROUP BY killed_by
+ORDER BY total DESC
+LIMIT 10;
+```
+
+
+<div align="center">
+  <kbd>
+    <img src="https://imgur.com/3QkUtfZ.png" width="66%" height="66%" /> 
+  </kbd>
+</div>
+
+<br>
+
+```
+SELECT
+  CAST(playtime / 60 AS integer) AS minutes_played_rounded,
+  count(CAST(playtime / 60 AS integer )) AS total_sessions,
+  killed_by
+FROM player_stats
+WHERE player_ended_session = FALSE
+GROUP BY killed_by, minutes_played_rounded
+ORDER BY minutes_played_rounded;
+```
+
+
 
 
 
